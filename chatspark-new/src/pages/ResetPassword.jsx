@@ -3,8 +3,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import colors from "../constants/colors";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
+    const navigate=useNavigate();
   return (
     <div
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
@@ -89,6 +91,7 @@ const ResetPassword = () => {
           onMouseLeave={(e) =>
             (e.currentTarget.style.backgroundColor = colors.buttonBg)
           }
+          onClick={()=>{navigate("/dashboard")}}
         >
           Confirm
         </motion.button>
